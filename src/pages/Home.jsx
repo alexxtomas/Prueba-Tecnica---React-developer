@@ -1,10 +1,14 @@
 import PopularCards from '../components/PopularCards'
+import SubTitle from '../components/SubTitle'
 
 const Home = () => {
   return (
-    <section className='popular'>
-      <PopularCards />
-    </section>
+    <>
+      <SubTitle>Titles</SubTitle>
+      <section className='popular'>
+        <PopularCards />
+      </section>
+    </>
   )
 }
 

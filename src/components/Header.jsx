@@ -2,8 +2,7 @@
 const Header = () => {
   return (
     <header>
-      <h1>DEMO Streaming</h1>
-      <h2>Popular Titles</h2>
+      <h1><span>DEMO</span> Streaming</h1>
     </header>
   )
 }
