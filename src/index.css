@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  background-color: #FFF;
+  background-color: #fafafa;
   color: #333;
   font-family: 'Roboto', sans-serif;
   display: flex;
@@ -100,6 +100,8 @@ header h1 {
   display: inline-block;
   text-align: center;
   overflow: hidden;
+  border-radius: 5px;
+
 }
 
 .black-background img {
@@ -130,9 +132,15 @@ header h1 {
   gap: 8px;
 }
 
+.filter-by-year label {
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+
 .filter-by-year select {
   border-radius: 5px;
   width: 100px;
+  font-weight: bolder;
 }
 
 
@@ -159,6 +167,34 @@ header h1 {
 .card-image {
   width: 160px;
   height: 260px;
+  border-radius: 5px;
+
+}
+
+.pagination {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 2rem;
+  padding: 5px;
+  font-weight: bolder;
+
+}
+
+.pagination p {
+  font-size: 1.1rem;
+}
+
+.pagination button {
+  transition: all 0.5 ease-in-out;
+  border: none;
+  width: 2rem;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  scale: 1.1;
 }
 
 /* POPUP  */
@@ -169,7 +205,7 @@ header h1 {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,20 +213,20 @@ header h1 {
   z-index: 10;
 }
 
-.popup:hover {
-  opacity: 1;
-}
+
 
 .popup-inner {
   position: relative;
   padding: 3rem;
   width: 100%;
   max-width: 640px;
-  background-color: #FFF;
+  background-color: #fafafa;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
+  border: 1px solid #222
 }
 
 .popup-header {
@@ -229,6 +265,7 @@ header h1 {
 .popup-main img {
   width: 160px;
   height: 260px;
+  border-radius: 5px;
 }
 
 
