@@ -1,6 +1,5 @@
 # Prueba Técnica React
 
-To start App → 
 
 ## To Start App:
 
