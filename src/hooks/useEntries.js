@@ -12,9 +12,9 @@ export const useEntries = () => {
     if (!entriesFromLocalStroage) {
       api.getEntries()
         .then(data => {
-          const filtredData = filterData(data)
-          setEntries(filtredData)
-          window.localStorage.setItem('entries', JSON.stringify(filtredData))
+          const filteredData = filterData(data)
+          setEntries(filteredData)
+          window.localStorage.setItem('entries', JSON.stringify(filteredData))
           setLoading(false)
         })
         .catch(e => {
@@ -29,11 +29,6 @@ export const useEntries = () => {
 
   return { entries, loading, error }
 }
-
-// Al hacer click sobre el titulo deberá abrirse un popup mistrando la inforamcion completa title
-// description
-// releaseYear
-// images → Poster Art → url
 
 // filtro por año
 // paginacion

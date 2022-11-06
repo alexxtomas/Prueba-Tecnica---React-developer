@@ -1,3 +1,4 @@
+import Filter from '../components/Filter'
 import ProgramCards from '../components/ProgramCards'
 import SubTitle from '../components/SubTitle'
 
@@ -5,9 +6,8 @@ const Movies = () => {
   return (
     <>
       <SubTitle>Movies</SubTitle>
-      <section className='series'>
-        <ProgramCards programType='movie' />
-      </section>
+      <Filter programType='movie' />
+      <ProgramCards programType='movie' />
     </>
   )
 }
