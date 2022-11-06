@@ -10,14 +10,15 @@ const ProgramCards = ({ programType }) => {
 
   const cardObj = entries
     .filter(entry => entry.programType === programType)
-    .map(entry => ({
-      title: entry.title,
-      image: entry.images['Poster Art'].url
+    .map(({ title, description, images, releaseYear }) => ({
+      title,
+      image: images['Poster Art'].url,
+      description,
+      releaseYear
     }))
-  console.log(cardObj.length)
 
   return (
-    cardObj.map(({ title, image }) => <ProgramCard key={title} title={title} image={image} />)
+    cardObj.map(({ title, image, description, releaseYear }) => <ProgramCard key={title} title={title} image={image} description={description} releaseYear={releaseYear} />)
   )
 }
 

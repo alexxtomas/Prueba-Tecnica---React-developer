@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import api from '../api/api'
+import { filterData } from '../utils/filterData'
 
 export const useEntries = () => {
   const [entries, setEntries] = useState([])
@@ -11,8 +12,9 @@ export const useEntries = () => {
     if (!entriesFromLocalStroage) {
       api.getEntries()
         .then(data => {
-          setEntries(data)
-          window.localStorage.setItem('entries', JSON.stringify(data))
+          const filtredData = filterData(data)
+          setEntries(filtredData)
+          window.localStorage.setItem('entries', JSON.stringify(filtredData))
           setLoading(false)
         })
         .catch(e => {
@@ -27,3 +29,11 @@ export const useEntries = () => {
 
   return { entries, loading, error }
 }
+
+// Al hacer click sobre el titulo deberá abrirse un popup mistrando la inforamcion completa title
+// description
+// releaseYear
+// images → Poster Art → url
+
+// filtro por año
+// paginacion
